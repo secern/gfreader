@@ -1,0 +1,24 @@
+package org.vudroid.pdfdroid.codec;
+
+import android.content.ContentResolver;
+
+public class PdfContext
+{
+    static
+    {
+    	System.loadLibrary("vudroid");
+    }
+
+    public PdfDocument openDocument(String fileName)
+    {
+        return PdfDocument.openDocument(fileName, "");
+    }
+
+    public void setContentResolver(ContentResolver contentResolver)
+    {
+        //TODO
+    }
+
+    public void recycle() {
+    }
+}

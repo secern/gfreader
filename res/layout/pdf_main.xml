@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+	<!-- 顶部“正在加载”布局 -->
+    <LinearLayout 
+        android:id="@+id/pdfLoadingLayoutTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+	    <com.ant.liao.GifView
+	        android:id="@+id/pdfLoadingImgTop"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingRight="5dp"
+	        android:enabled="false"
+	        />
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:text="@string/loading"
+	        />        
+    </LinearLayout>
+
+	<!-- 底部“正在加载”布局 -->
+    <LinearLayout 
+        android:id="@+id/pdfLoadingLayoutBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+	    <com.ant.liao.GifView
+	        android:id="@+id/pdfLoadingImgBottom"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingRight="5dp"
+	        android:enabled="false"
+	        />
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:text="@string/loading"
+	        />        
+    </LinearLayout>
+
+    <!-- PDF文档布局 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+	    <ListView
+	        android:id="@+id/pdfListview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        >
+	    </ListView>
+    </LinearLayout>
+
+</RelativeLayout>
